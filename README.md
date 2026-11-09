@@ -109,7 +109,7 @@ Credits
 
 * Hazza12555: Developed [the Rio Tools](https://reshax.com/topic/19286-xbox-360-playstation-3-rio-the-video-game-goldeneye-007-reloaded-edb-geo-dat/page/2/?&_rid=2465#findComment-107157), of which have been uploaded here out 
   of convenience and preservation. 
-* h3x3r: Drafted up and provided the [blueprint](https://reshax.com/topic/19286-xbox-360-playstation-3-rio-the-video-game-goldeneye-007-reloaded-edb-geo-dat/?&_rid=2465#findComment-106442) used for the Noesis plugin.
+* h3x3r: Drafted up and provided the [unfinished plugin script](https://reshax.com/topic/19286-xbox-360-playstation-3-rio-the-video-game-goldeneye-007-reloaded-edb-geo-dat/?&_rid=2465#findComment-106442) that was used for the foundation of the Noesis plugin.
 * Falkrian: Assisted with this whole endeavor, especially in cracking the .EDB 
   archives.
 * Obscure Gamers: Responsible for having provided both the [2010](https://hiddenpalace.org/Rio_(Apr_13,_2011_prototype)) and [2011](https://hiddenpalace.org/Rio_(Apr_13,_2011_prototype)) 
@@ -120,3 +120,8 @@ Credits
   Eurocom's games, specifically on their [proprietary in-house game engine](https://sphinxandthecursedmummy.fandom.com/wiki/EngineX) and
   [the EDB archival format.](https://sphinxandthecursedmummy.fandom.com/wiki/EDB)
 * Eurocom: Developers of Rio: The Video Game.
+
+Disclaimer
+---------------
+
+AI was used during the development of the Noesis plugin, of which I extensively ensured that it had a lot of care and quality poured into its code. Furthermore, I do not claim to entirely own it either, nor should I. The plugin as mentioned was built off of h3x3r's work and it would plainly be wrong to do so. This repository also does not provide any of the game's extracted assets and will have to be obtained separately from the toolset via a legal copy of Rio: the Video Game. The Python tools as well cannot extract from Eurocom's file archives and will require [QuickBMS](https://aluigi.altervista.org/quickbms.htm) and [Rio's dedicated extraction script for those archives](https://aluigi.altervista.org/bms/rio.bms).
