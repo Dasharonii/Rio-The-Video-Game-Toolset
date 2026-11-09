@@ -1,4 +1,4 @@
-"""Noesis importer for Rio: The Video Game resources.
+"""Noesis importer for Rio: The Video Game assets.
 
 Format and geometry work lives in inc_rio.py, which has no Noesis dependencies
 so it can be exercised by test_rio_core.py under the system Python.
@@ -221,22 +221,22 @@ def entity_parts(mesh):
 FALLBACK_SUFFIXES = (("normal", "_nm"), ("specular", "_sm"))
 FALLBACK_DEPTH = 3
 
-# Blocks that hold data rather than colour: normals, and the _sm maps, whose
-# energy sits in a single per-part channel. Noesis converts colour textures to
+# Blocks that hold data rather than color: normals, and the _sm maps, whose
+# energy sits in a single per-part channel. Noesis converts color textures to
 # linear for lighting but must not do that to these.
 LINEAR_SUFFIXES = ("_nm", "_sm")
 
 # The _sm maps are packed per-part parameter masks, not painted highlight
-# colours - mounting one paints green or blue gloss onto parts that should not
+# colors - mounting one paints green or blue gloss onto parts that should not
 # have it. Preview one subdued neutral highlight instead of Noesis' white,
 # exponent-8 default, which was broad and hot enough to read as chrome.
-SPECULAR_COLOUR = [0.4, 0.4, 0.4, 24.0]
+SPECULAR_color = [0.4, 0.4, 0.4, 24.0]
 
 # Noesis lights a preview with one directional light and a black ambient, so
 # the side turned away falls to near-black. The art already carries its own
 # painted shading, so that reads as a second, wrong-looking layer of AO. A
 # small ambient lifts the shadowed side without flattening the model.
-AMBIENT_COLOUR = [0.4, 0.4, 0.4, 1.0]
+AMBIENT_color = [0.4, 0.4, 0.4, 1.0]
 
 
 def entity_catalogue(path):
@@ -321,7 +321,7 @@ def entity_fallback_maps(path):
 
 
 def entity_texture_name(path, key):
-    """A stable, unique Noesis texture name for one resource file."""
+    """A stable, unique Noesis texture name for one texture file."""
     stem = os.path.splitext(os.path.basename(path))[0]
     name = stem
     suffix = 2
@@ -333,7 +333,7 @@ def entity_texture_name(path, key):
 
 
 def entity_texture(path):
-    """Load a .texture through the registered handler, once per resource file."""
+    """Load a .texture through the registered handler, once per texture file."""
     key = os.path.normcase(os.path.abspath(path))
     if key in TEXTURES:
         return TEXTURES[key]
@@ -418,10 +418,10 @@ class EntityMaterials(object):
                 target = self._texture_name(maps.get(role))
                 if target:
                     setter(target)
-            # Loaded for the texture list, but never mounted: see SPECULAR_COLOUR.
+            # Loaded for the texture list, but never mounted: see SPECULAR_color.
             self._texture_name(maps.get("specular"))
-            material.setSpecularColor(NoeVec4(SPECULAR_COLOUR))
-            material.setAmbientColor(NoeVec4(AMBIENT_COLOUR))
+            material.setSpecularColor(NoeVec4(SPECULAR_color))
+            material.setAmbientColor(NoeVec4(AMBIENT_color))
             self.materials[name] = material
             self.matList.append(material)
             self.signatures[signature] = name
