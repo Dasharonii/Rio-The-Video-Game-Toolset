@@ -38,6 +38,13 @@ Without the index, the plugin wouldn't have been able to resolve each submesh's
 material and its base, normal and specular maps by UID, and name the Noesis materials 
 after the material resource. Not without some manual labor that is.
 
+Furthermore, it should also be clarified that if there is no `resource_index.tsv` at 
+the root of your extraction/s, meshes will have their filenames be generated from any
+surrounding filenames (i.e. `<name>_cm`, `<name>_nm`, `<name>_sm`), of which can in 
+fact cover simple rips, but not color variants or shared libraries. Assets on that note 
+will have to be obtained from the prototype builds and this repository does not provide 
+any assets, nor will any be provided either. 
+
 Reading a model
 ---------------
 
