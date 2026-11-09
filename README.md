@@ -29,21 +29,20 @@ Resource index
 --------------
 
 Meshes carry material and texture numbers, not names. Those numbers are only
-explained by the `resource_index.tsv` index database found in the prototype builds, 
-which the extractor writes beside a folder containing extracted assets. Keep the 
-contents of the level/character folders as they are. Reason being is that the meshes 
-routinely uses materials and textures from their own respective designated folders.
+explained by the `resource_index.tsv` index database, of which are found in the 
+prototype builds. It should be noted that it will have to be obtained from them as 
+this repository does not provide any assets, nor will any be provided either. Be sure 
+to keep the contents of the level/character folders as they are though. Reason being 
+is that the meshes routinely uses materials and textures from their own respective 
+designated folders.
 
-Without the index, the plugin wouldn't have been able to resolve each submesh's 
-material and its base, normal and specular maps by UID, and name the Noesis materials 
-after the material resource. Not without some manual labor that is.
+With said resource index, the plugin resolves each submesh's material and its base, 
+normal and specular maps by UID, and names the Noesis materials after the material
+resource.
 
-Furthermore, it should also be clarified that if there is no `resource_index.tsv` at 
-the root of your extraction/s, meshes will have their filenames be generated from any
-surrounding filenames (i.e. `<name>_cm`, `<name>_nm`, `<name>_sm`), of which can in 
-fact cover simple rips, but not color variants or shared libraries. Assets on that note 
-will have to be obtained from the prototype builds and this repository does not provide 
-any assets, nor will any be provided either. 
+Without that very index, it falls back to filenames near the mesh - `<name>_cm`, 
+`<name>_nm`, `<name>_sm` - which covers simple rips but not color variants or shared 
+libraries.
 
 Reading a model
 ---------------
