@@ -107,7 +107,7 @@ Known behavior
 Credits
 ---------------
 
-* Hazza12555: Developed the Rio Tools, of which have been uploaded here out 
+* Hazza12555: Developed [the Rio Tools](https://reshax.com/topic/19286-xbox-360-playstation-3-rio-the-video-game-goldeneye-007-reloaded-edb-geo-dat/page/2/?&_rid=2465#findComment-107157), of which have been uploaded here out 
   of convenience and preservation. 
 * h3x3r: Drafted up and provided the [blueprint](https://reshax.com/topic/19286-xbox-360-playstation-3-rio-the-video-game-goldeneye-007-reloaded-edb-geo-dat/?&_rid=2465#findComment-106442) used for the Noesis plugin.
 * Falkrian: Assisted with this whole endeavor, especially in cracking the .EDB 
